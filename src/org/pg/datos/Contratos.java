@@ -2,36 +2,43 @@ package org.pg.datos;
 
 public class Contratos {
 	private Integer fechaCreacion;
-	private String datosEmpleado;
-	private String datosEmpresa;
-	public Contratos(Integer fechaCreacion, String datosEmpleado, String datosEmpresa) {
+	private Empleado empleado;
+	private Empresa empresa;
+
+	public Contratos(Integer fechaCreacion, Empleado empleado, Empresa empresa) {
 		super();
 		this.fechaCreacion = fechaCreacion;
-		this.datosEmpleado = datosEmpleado;
-		this.datosEmpresa = datosEmpresa;
+		this.empleado = empleado;
+		this.empresa = empresa;
 	}
+
 	public Integer getFechaCreacion() {
 		return fechaCreacion;
 	}
+
 	public void setFechaCreacion(Integer fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
-	public String getDatosEmpleado() {
-		return datosEmpleado;
+
+	public Empleado getEmpleado() {
+		return empleado;
 	}
-	public void setDatosEmpleado(String datosEmpleado) {
-		this.datosEmpleado = datosEmpleado;
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
 	}
-	public String getDatosEmpresa() {
-		return datosEmpresa;
+
+	public Empresa getEmpresa() {
+		return empresa;
 	}
-	public void setDatosEmpresa(String datosEmpresa) {
-		this.datosEmpresa = datosEmpresa;
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
+
 	@Override
 	public String toString() {
-		return "Contratos [fechaCreacion=" + fechaCreacion + ", datosEmpleado=" + datosEmpleado + ", datosEmpresa="
-				+ datosEmpresa + "]";
+		return "Contratos [fechaCreacion=" + fechaCreacion + ", empleado=" + empleado + ", empresa=" + empresa + "]";
 	}
 
 }
