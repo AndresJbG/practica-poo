@@ -1,44 +1,39 @@
 package org.pg.datos;
 
+import java.time.LocalDateTime;
+
 public class Contratos {
-	private Integer fechaCreacion;
+	private LocalDateTime fecha;
 	private Empleado empleado;
 	private Empresa empresa;
-
-	public Contratos(Integer fechaCreacion, Empleado empleado, Empresa empresa) {
+	public Contratos(LocalDateTime fecha, Empleado empleado, Empresa empresa) {
 		super();
-		this.fechaCreacion = fechaCreacion;
+		this.fecha = fecha;
 		this.empleado = empleado;
 		this.empresa = empresa;
 	}
-
-	public Integer getFechaCreacion() {
-		return fechaCreacion;
+	public LocalDateTime getFecha() {
+		return fecha;
 	}
-
-	public void setFechaCreacion(Integer fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
+	public void setFecha(LocalDateTime fecha) {
+		this.fecha = fecha;
 	}
-
 	public Empleado getEmpleado() {
 		return empleado;
 	}
-
 	public void setEmpleado(Empleado empleado) {
 		this.empleado = empleado;
 	}
-
 	public Empresa getEmpresa() {
 		return empresa;
 	}
-
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}
-
 	@Override
 	public String toString() {
-		return "Contratos [fechaCreacion=" + fechaCreacion + ", empleado=" + empleado + ", empresa=" + empresa + "]";
+		return "Contratos [fecha=" + fecha + ", empleado=" + empleado + ", empresa=" + empresa + "]";
+	}
 	}
 
-}
+
